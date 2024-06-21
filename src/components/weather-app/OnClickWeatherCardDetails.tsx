@@ -11,13 +11,17 @@ type Props = {
   handleToggleDetails: () => void;
 };
 
-export const OnClickWeatherCardDetails = ({ weatherData, weatherMain, handleToggleDetails }: Props) => {
+export const OnHoverWeatherCard = ({
+  weatherData,
+  weatherMain,
+  handleToggleDetails,
+}: Props) => {
   return (
     <Box
       as={motion.div}
-      initial={{ opacity: 0, rotateY: 90 }}
-      animate={{ opacity: 1, rotateY: 0 }}
-      exit={{ opacity: 0, rotateY: -90 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       position="absolute"
       top="0"
       left="0"
@@ -29,7 +33,7 @@ export const OnClickWeatherCardDetails = ({ weatherData, weatherMain, handleTogg
       alignItems="center"
       borderRadius="lg"
       zIndex="10"
-      style={{ backfaceVisibility: "hidden" }}
+      onClick={handleToggleDetails}
     >
       <Box w="full" h="full">
         <Box
@@ -53,7 +57,7 @@ export const OnClickWeatherCardDetails = ({ weatherData, weatherMain, handleTogg
 
           <Box pos="absolute" top="0" right="0" p="1">
             <Button size="xs" variant="link" onClick={handleToggleDetails}>
-              <ChevronDownIcon color="gray.600" fontSize="1.6rem" />
+              <ChevronDownIcon color="gray.600" fontSize="1.5rem" />
             </Button>
           </Box>
         </Box>

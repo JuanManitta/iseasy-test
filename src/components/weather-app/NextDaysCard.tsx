@@ -18,7 +18,7 @@ export const NextDaysCard = ({ weatherData }: Props) => {
   const maxTemp = Math.max(...weatherData.map((item) => item.main.temp));
   const minTemp = Math.min(...weatherData.map((item) => item.main.temp));
   const date = new Date(weatherData[0].dt * 1000);
-  const weatherIcon = weatherData[0].weather[0].icon;
+  const weatherIcon = weatherData[0].weather[0].icon.slice(0, -1);
   const weatherDescription = weatherData[0].weather[0].description;
   const weatherMain = weatherData[0].weather[0].main;
 
@@ -67,7 +67,7 @@ export const NextDaysCard = ({ weatherData }: Props) => {
 
         <Box display="flex" justifyContent="center" mt={4}>
           <img
-            src={`http://openweathermap.org/img/wn/${weatherIcon}.png`}
+            src={`http://openweathermap.org/img/wn/${weatherIcon}d.png`}
             alt=""
           />
         </Box>

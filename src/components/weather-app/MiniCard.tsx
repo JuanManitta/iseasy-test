@@ -5,8 +5,6 @@ type Props = {
   interval: List;
 };
 export const MiniCard = ({ interval }: Props) => {
-  console.log();
-
   return (
     <Card
       variant="filled"

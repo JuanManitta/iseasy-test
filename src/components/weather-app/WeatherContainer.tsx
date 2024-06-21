@@ -45,14 +45,14 @@ export const WeatherContainer = ({ weatherData }: Props) => {
 
     return grouped;
   };
-  
+
   return (
     <Box as="section" pt="6" display="flex" flexWrap="wrap" gap="4">
       {currentDayWeather && (
         <CurrentDayCard currentDayWeather={currentDayWeather} />
       )}
 
-      { nextDaysComponents }
+      {nextDaysComponents}
     </Box>
   );
 };

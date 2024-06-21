@@ -7,12 +7,11 @@ import { getWeather } from "./api/open-weather-api";
 import { Loading } from "./components/ui/Loading";
 import { useTranslation } from "react-i18next";
 
-
 function App() {
   const { t, i18n } = useTranslation();
 
   const [weatherData, setWeatherData] = useState<WeatherData>();
-  const [selectedCity, setSelectedCity] = useState(t("london"));
+  const [selectedCity, setSelectedCity] = useState("london");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,7 +24,13 @@ function App() {
 
   return (
     <>
-      <Box as="header" p='4' px="8" display="flex" justifyContent="space-between">
+      <Box
+        as="header"
+        p="4"
+        px="8"
+        display="flex"
+        justifyContent="space-between"
+      >
         <CitySelector
           selectedCity={selectedCity}
           setSelectedCity={setSelectedCity}

@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# React TypeScript Project with Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was bootstrapped with [Vite](https://vitejs.dev/).
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make sure you have the following software installed on your machine:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/en/) (v14 or later)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### 1. Clone the Repository
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+git clone https://github.com/JuanManitta/iseasy-test.git
+cd iseasy-test
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 2. Install Dependencies
+```bash
+yarn install
+```
+
+### 3. Environment Variables
+```bash
+mv .env.template .env
+```
+
+### 4. Run the Application
+```bash
+yarn dev
+```
+### 5. Build for Production
+```bash
+yarn build
+```
+### 6. Preview Production Build
+```bash
+yarn serve
+```

@@ -1,6 +1,7 @@
 import { Button, Box } from "@chakra-ui/react";
 import { TFunction, i18n } from "i18next";
 import { MdLanguage } from "react-icons/md";
+import { useState } from 'react';
 
 type Props = {
   i18n: i18n;
@@ -8,10 +9,12 @@ type Props = {
 };
 
 export const LangSelector = ({ t, i18n }: Props) => {
+  const [selectedLang, setSelectedLang] = useState('en')
   const languagues = ["es", "en"];
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+    setSelectedLang(lang)
   };
 
   return (
@@ -22,7 +25,7 @@ export const LangSelector = ({ t, i18n }: Props) => {
         size='xs'
           key={lang}
           onClick={() => changeLanguage(lang)}
-          variant={i18n.language === lang ? "solid" : "ghost"}
+          variant={selectedLang === lang ? "solid" : "ghost"}
         >
           {t(lang)} 
         </Button>

@@ -1,5 +1,6 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { BiLocationPlus } from "react-icons/bi";
 
 type Props = {
@@ -8,15 +9,14 @@ type Props = {
 };
 
 const cities = [
-  { value: "Barcelona", label: "Barcelona" },
-  { value: "Paris", label: "Paris" },
-  { value: "London", label: "London" },
+  { value: "Barcelona", label: "barcelona" },
+  { value: "Paris", label: "paris" },
+  { value: "London", label: "london" },
 ];
 
 export const CitySelector = ({ selectedCity, setSelectedCity }: Props) => {
+  const { t } = useTranslation();
   const handleSelectcity = (city: string) => {
-    console.log(city);
-
     setSelectedCity(city);
   };
 
@@ -28,17 +28,17 @@ export const CitySelector = ({ selectedCity, setSelectedCity }: Props) => {
         size="xs"
         rightIcon={<ChevronDownIcon />}
       >
-        {selectedCity}
+        {t(selectedCity)}
       </MenuButton>
       <MenuList>
         {cities.map((city) => (
           <MenuItem
-            fontSize='xs'
+            fontSize="xs"
             key={city.value}
             value={city.value}
             onClick={() => handleSelectcity(city.value)}
           >
-            {city.label}
+            {t(city.label)}
           </MenuItem>
         ))}
       </MenuList>

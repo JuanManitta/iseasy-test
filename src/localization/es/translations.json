@@ -1,0 +1,23 @@
+{
+    "translation":{
+        "en":"Inglés",
+        "es":"Español",
+
+        "loading-text": "Obteniendo datos meteorológicos...",
+
+        "london":"Londres",
+        "paris":"París",
+        "barcelona":"Barcelona",
+
+        "days-lang": "es-ES",
+
+        "feels-like": "Sensación térmica",
+        "humidity": "Humedad",
+        "Clouds": "Nubosidad",
+        "Clear": "Despejado",
+        "Rain": "Lluvia",
+
+        "month-lang": "es-ES"
+
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "translation":{
+        "en": "English",
+        "es": "Spanish",
+
+        "loading-text": "Obtaining weather data...",
+
+
+
+        "london": "London",
+        "paris": "Paris",
+        "barcelona": "Barcelona",
+
+        "days-lang": "en-EN",
+
+        "feels-like": "Feels like",
+        "humidity": "Humidity",
+
+        "month-lang": "en-US"
+
+    }
+}
